@@ -24,3 +24,6 @@ Thumbs.db
 *.log
 *.tmp
 *.bak
+
+# Local handoff/context notes
+ODOO_HANDOFF.md
