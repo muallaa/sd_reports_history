@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_partner_view_form_inherit_sd_reports_history" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.sd.reports.history</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="priority" eval="2"/>
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                    class="oe_stat_button"
+                    type="object"
+                    name="action_open_sd_reports_history"
+                    icon="fa-line-chart"
+                    invisible="not id">
+                    <field name="sd_reports_history_count" string="History" widget="statinfo"/>
+                </button>
+            </div>
+        </field>
+    </record>
+</odoo>

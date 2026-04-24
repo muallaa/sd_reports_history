@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sd_reports_history_wizard_view_form" model="ir.ui.view">
+        <field name="name">sd.reports.history.wizard.form</field>
+        <field name="model">sd.reports.history.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Reports History">
+                <sheet>
+                    <field name="visible_limit" invisible="1"/>
+                    <field name="history_total_count" invisible="1"/>
+                    <field name="has_more" invisible="1"/>
+                    <div class="sd_reports_history_filters">
+                        <field name="date_filter" nolabel="1"/>
+                        <field name="state_filter" nolabel="1"/>
+                        <field name="history_counter" nolabel="1"/>
+                        <button
+                            name="action_apply_filters"
+                            type="object"
+                            string="Apply Filters"
+                            class="btn-primary"/>
+                    </div>
+                    <field name="timeline_html" widget="html" nolabel="1"/>
+                    <div class="sd_reports_history_load_more" invisible="not has_more">
+                        <button
+                            name="action_load_more"
+                            type="object"
+                            string="Load More"
+                            class="btn-secondary"/>
+                    </div>
+                </sheet>
+                <footer>
+                    <button string="Close" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
